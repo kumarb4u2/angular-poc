@@ -3,7 +3,7 @@ import { FormsModule } from "@angular/forms";
 import { CounterComponent } from "./counter.component";
 import { SharedModule } from "src/app/shared/shared.module";
 
-fdescribe("CounterComponent", () => {
+describe("CounterComponent", () => {
   let component: CounterComponent;
   let fixture: ComponentFixture<CounterComponent>;
 

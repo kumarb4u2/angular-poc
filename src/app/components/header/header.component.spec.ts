@@ -5,7 +5,7 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { CartService } from "src/app/cart/services/cart.service";
 import { AuthService } from "src/app/shared/services/auth.service";
 
-fdescribe("HeaderComponent", () => {
+describe("HeaderComponent", () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
   let cartServiceStub: Partial<CartService>;

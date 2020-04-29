@@ -5,7 +5,7 @@ import { TableComponent } from "../table/table.component";
 import { BrowserDynamicTestingModule } from "@angular/platform-browser-dynamic/testing";
 import { HostTemplateDirective } from "src/app/directives/host-template.directive";
 
-fdescribe("AboutComponent", () => {
+describe("AboutComponent", () => {
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
 
