@@ -1,16 +1,22 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AboutComponent } from './about.component';
+import { AboutComponent } from "./about.component";
+import { TableComponent } from "../table/table.component";
+import { BrowserDynamicTestingModule } from "@angular/platform-browser-dynamic/testing";
+import { HostTemplateDirective } from "src/app/directives/host-template.directive";
 
-describe('AboutComponent', () => {
+fdescribe("AboutComponent", () => {
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
+      declarations: [AboutComponent, TableComponent, HostTemplateDirective],
     })
-    .compileComponents();
+      .overrideModule(BrowserDynamicTestingModule, {
+        set: { entryComponents: [TableComponent] },
+      })
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +25,7 @@ describe('AboutComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
